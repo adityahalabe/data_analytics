@@ -14,9 +14,9 @@ class QueryController @Inject() (queryService: QueryService) extends Controller 
 
    def getQueryResults() = Action {
      request =>{
-       val countryName = request.getQueryString("countryName").getOrElse("")
-       println(countryName)
-       val list = queryService.getQueryResults(countryName)
+       val countryName = request.getQueryString("countryName").getOrElse("").toLowerCase
+       val countryCode = request.getQueryString("countryCode").getOrElse("").toLowerCase
+       val list = queryService.getQueryResults(countryName,countryCode)
        Ok(views.html.queryResults(list))
      }
    }

@@ -21,7 +21,8 @@
             <div class="homeLink">
                 <a href='/'>Home</a>
             </div>
-            <table>
+            @if(results.nonEmpty){
+                <table>
                 <caption>Analytics</caption>
                 <tr>
                     <th>Country Name</th>
@@ -37,6 +38,10 @@
                 </tr>
                 }
             </table>
+            }else{
+                <p class="noResults">No Matching countries Found</p>
+            }
+
         </div>
     </div>
 </body>

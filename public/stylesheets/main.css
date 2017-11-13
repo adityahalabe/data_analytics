@@ -36,7 +36,7 @@ a {
     display: inline-block;
 }
 input[type=text] {
-    width: 30%;
+    width: 25%;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
@@ -64,4 +64,10 @@ body.home {
 
 .homeLink {
     padding-left: 1.5cm;
+}
+p.noResults {
+    margin: auto;
+    text-align: center;
+    padding-top: 2cm;
+    font-size: 200%;
 }
