@@ -14,7 +14,7 @@ trait DataFrameGetter {
      .schema(customSchema)
      .option("header", "true")
      .option("inferSchema", "true")
-     .load(s"/Users/ahm2320/aditya/personal/OwnProjects/lunatech/code-assessment/public/$fileName.csv")
+     .load(s"public/$fileName.csv")
     df.createOrReplaceTempView(fileName)
     df
   }
