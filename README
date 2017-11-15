@@ -1,49 +1,49 @@
-This is your new Play application
+This is Airport data analysis web application developed using Play framework with help of Spark SQL and Data frames.
+
 =================================
 
-This file will be packaged with your application when using `activator dist`.
 
-There are several demonstration files available in this template.
-
-Controllers
-===========
-
-- HomeController.scala:
-
-  Shows how to handle simple HTTP requests.
-
-- AsyncController.scala:
-
-  Shows how to do asynchronous programming when handling a request.
-
-- CountController.scala:
-
-  Shows how to inject a component into a controller and use the component when
-  handling requests.
-
-Components
+Controller
 ==========
 
-- Module.scala:
+ - QueryController
 
-  Shows how to use Guice to bind all the components needed by your application.
+   This controller defines method for querying data with country name or code.
 
-- Counter.scala:
+ - ReportController
 
-  An example of a component that contains state, in this case a simple counter.
+   This controller defines methods to fetch different reports required on data.
 
-- ApplicationTimer.scala:
+Data Handlers
+=============
 
-  An example of a component that starts when the application starts and stops
-  when the application stops.
+ - Data handlers defines methods which deals with creating data frames from CSV file. It also takes care of joining different data frames on common column.
 
-Filters
-=======
 
-- Filters.scala:
+Services
+========
 
-  Creates the list of HTTP filters used by your application.
+  - QueryService
 
-- ExampleFilter.scala
+    Returns results with help of data handlers as per country codes or name provided by user.
 
-  A simple filter that adds a header to every response.
+  - ReportService
+
+    Generates reports with help of data handlers.
+
+
+How to run
+================================
+   1. git clone https://github.com/adityahalabe/data_analytics.git
+   2. cd data_analytics
+   3. sbt run
+   4. Visit localhost:9000
+   5. Home screen with let you query as well as get reports.
+
+
+Things which can be improved
+=================================
+
+   1. Testing is not full proof and I have not covered all corner cases.
+   2. File names in ApplicationConfig can be taken from properties file so testing can be done on subset of data.
+   3. View tests
