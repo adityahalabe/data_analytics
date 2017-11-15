@@ -7,8 +7,7 @@ import org.apache.spark.sql.types._
   */
 trait AirportsDataFrame extends DataFrameGetter{
 
-   val airportCsv = "airports"
-   def getAirportDataFrame() = {
+   def getAirportDataFrame(airportCsv : String) = {
      val customSchema: StructType = StructType(Array(
        StructField("id", IntegerType, false),
        StructField("ident", StringType, false),

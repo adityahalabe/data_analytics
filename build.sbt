@@ -11,6 +11,7 @@ libraryDependencies ++= Seq(
   cache,
   ws,
   "org.scalatestplus.play" %% "scalatestplus-play" % "1.5.1" % Test,
+  "org.mockito" % "mockito-core" % "2.11.0" % "test",
   "com.fasterxml.jackson.core" % "jackson-core" % "2.8.7",
   "com.fasterxml.jackson.core" % "jackson-databind" % "2.8.7",
   "com.fasterxml.jackson.core" % "jackson-annotations" % "2.8.7",
@@ -21,4 +22,5 @@ libraryDependencies ++= Seq(
   "org.apache.spark" % "spark-sql_2.11" % "2.1.1",
   "com.adrianhurt" %% "play-bootstrap" % "1.0-P25-B3"
 )
+
 libraryDependencies ~= { _.map(_.exclude("org.slf4j", "slf4j-log4j12")) }

@@ -8,8 +8,7 @@ import org.apache.spark.sql.types._
   */
 trait RunwaysDataFrame extends DataFrameGetter{
 
-   val runwayCsv = "runways"
-   def getRunwayDataFrame() = {
+   def getRunwayDataFrame(runwayCsv : String) = {
      val customSchema: StructType = StructType(Array(
        StructField("id", IntegerType, false),
        StructField("airport_ref", StringType, false),

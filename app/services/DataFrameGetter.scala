@@ -1,6 +1,7 @@
 package services
 
-import org.apache.spark.sql.types.{StringType, StructField, IntegerType, StructType}
+import org.apache.commons.io.FilenameUtils
+import org.apache.spark.sql.types.{StructType}
 
 /**
  * Created by ahm2320 on 11/11/17.
@@ -14,8 +15,9 @@ trait DataFrameGetter {
      .schema(customSchema)
      .option("header", "true")
      .option("inferSchema", "true")
-     .load(s"public/$fileName.csv")
-    df.createOrReplaceTempView(fileName)
+     .load(s"public/$fileName")
+
+    df.createOrReplaceTempView(FilenameUtils.getBaseName(fileName))
     df
   }
 

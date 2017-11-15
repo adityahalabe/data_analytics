@@ -7,8 +7,7 @@ import org.apache.spark.sql.types.{StringType, IntegerType, StructField, StructT
  */
 trait CountriesDataFrame extends DataFrameGetter{
 
-  val countryCsv = "countries"
-  def getCountryDataFrame() = {
+  def getCountryDataFrame(countryCsv : String) = {
     val customSchema: StructType = StructType(Array(
       StructField("id", IntegerType, false),
       StructField("code", StringType, false),
