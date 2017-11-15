@@ -1,6 +1,6 @@
-package services
+package datahandlers
 
-import org.apache.spark.sql.types.{StringType, IntegerType, StructField, StructType}
+import org.apache.spark.sql.types.{IntegerType, StringType, StructField, StructType}
 
 /**
  * Created by ahm2320 on 11/11/17.

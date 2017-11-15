@@ -1,7 +1,8 @@
-package services
+package datahandlers
 
+import helpers.SparkContextGetter
 import org.apache.commons.io.FilenameUtils
-import org.apache.spark.sql.types.{StructType}
+import org.apache.spark.sql.types.StructType
 
 /**
  * Created by ahm2320 on 11/11/17.

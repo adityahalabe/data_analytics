@@ -1,6 +1,7 @@
 package services
 
 import com.google.inject.Inject
+import datahandlers.DataFrameHandler
 import model._
 
 import scala.collection.JavaConverters._

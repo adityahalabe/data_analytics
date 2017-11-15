@@ -1,6 +1,6 @@
-package services
+package datahandlers
 
-import org.apache.spark.sql.DataFrame
+import datahandlers.DataFrameGetter
 import org.apache.spark.sql.types._
 
 /**

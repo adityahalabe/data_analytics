@@ -1,6 +1,7 @@
 package services
 
 import com.google.inject.Inject
+import datahandlers.DataFrameHandler
 import model.QueryResult
 import scala.collection.JavaConverters._
 import org.apache.spark.sql.functions._
